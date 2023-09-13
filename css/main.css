@@ -1,0 +1,899 @@
+@import url('https://fonts.cdnfonts.com/css/mona-sans?styles=144343,144355,144329');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans', sans-serif;
+}
+
+body {
+    background-image: url(/assets/granulado.png);
+    background-color: #1d1d1d;
+    min-height: 200vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background-color: #fff;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: black;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+    font-size: 3em;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1d1d1d;
+    font-weight: 600px;
+    transition: 0.6s;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/granulado.png);
+  background-color: #1d1d1d;
+}
+
+.banner .scroll-down {
+  position: absolute;
+  color: #7d7d7d;
+  font-size: 1.5rem;
+  margin-top: 800px;
+  animation: scrollAnimation 1.5s infinite alternate;
+}
+
+
+@keyframes scrollAnimation {
+  0% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(10px);
+  }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .texto-principal {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+
+/* NUEVO EFECTO TYPE */
+
+.texto-principal .typed {
+  padding: 5;
+  font-size: 1.85rem;
+}
+
+/* MEDIA QUERIE NUEVA ANIMACION */
+
+@media (max-width: 800px){
+  .container-text .titulo, .container-text .mascota {
+      font-size: 40px;
+  }
+}
+
+/* MEDIA QUERIE */
+
+@media (max-width: 800px){
+  .cover h1, .cover h2{
+      font-size: 60px;
+      padding: 3px 0;
+  }
+  .cover_atributes .static-txt, .dinamic-txt li{
+      font-size: 40px;
+  }
+  .cover p{
+      font-size: 15px;
+  }
+  /* .glow-on-hover{
+      width: 90px;
+      height: 50px;
+      font-size: 15px;
+  } */
+  .cards-intro p{
+      font-size: 10px;
+  }
+}
+
+
+/* SECTION ABOUT ME */
+
+#aboutMe {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_container {
+  width: 100%;
+  padding: 50px 8%;
+}
+
+.about_container .about_contents {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-gap: 70px;
+}
+
+.about_contents .imageSection {
+  position: relative;
+  min-width: 300px;
+  height: 480px;
+}
+
+.imageSection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.about_contents .imageSection::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  outline: 3px solid #48ff00;;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+
+.infoSection h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+  color: white;
+}
+
+.infoSection h1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  background-color: #48ff00;;
+}
+
+
+.infoSection h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: white;
+  padding: 5px 0px 5px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.infoSection p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+/* SKILLS */
+
+.skillsSection h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.skills-list {
+	margin-top: 1rem;
+}
+
+.skills-list {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	column-gap: 1rem;
+	row-gap: .5rem;
+}
+
+ol, ul {
+	list-style-type: none;
+  color: #fff;
+}
+
+.skill {
+	background-color: #2b2b2b;
+	padding: .5rem .75rem;
+  margin-top: 5px;
+	border-radius: .25rem;
+	border: 1px solid white;
+	transition: .2s;
+}
+
+/* PORTFOLIO */
+
+#proyectos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -20px;
+
+}
+
+#proyectos .section {
+	padding-top: 6rem;
+}
+
+.proyectosContainer {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-inline: 1.5rem;
+  width: 100%;
+  padding: 50px 8%;
+}
+
+/* Estilos para el título "Proyectos" y su subrayado */
+#proyectos .section-title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  position: relative;
+}
+
+#proyectos .section-title::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Ajusta la posición vertical según sea necesario */
+  left: 50%; /* Coloca el subrayado en el centro del título */
+  transform: translateX(-50%); /* Centra el subrayado horizontalmente */
+  width: 32%; /* Ajusta el ancho del subrayado según sea necesario */
+  height: 2px;
+  background-color: #48ff00;
+}
+
+
+.paragraph {
+  text-align: center;
+  color: white;
+	margin-bottom: 1em;
+	font-size: 1.4rem;
+}
+
+.projects-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+  color: #fff;
+}
+
+.project {
+	background-color: #2b2b2b;
+	padding: 2rem;
+	border-radius: .25rem;
+	border: 1px solid rgb(134, 134, 134);
+	transition: .2s;
+}
+
+.icono-verde {
+  color: green; /* Cambia "green" al color que desees */
+}
+
+
+#proyectos .project-icons {
+  color: white;
+	display: flex;
+	justify-content: end;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.project-skills {
+	gap: .5rem;
+	margin-top: 1.4rem;
+}
+
+.project-title {
+	margin-bottom: 1rem;
+	transition: .2s;
+}
+
+.skills-list {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	column-gap: 1rem;
+	row-gap: .5rem;
+}
+
+.project-skills .skill {
+	padding: .25rem .5rem;
+	border-radius: .25rem;
+}
+
+
+@media (hover: hover) {
+  .project:hover {
+      border-color: #48ff00;
+  }
+}
+
+@media (hover: hover) {
+  .project-icons a:hover {
+      color: #48ff00;
+  }
+}
+
+@media (hover: hover) {
+  .project:hover .project-title {
+      color: #48ff00;
+  }
+}
+
+@media (hover: hover) {
+  .skill:hover {
+      border-color: #48ff00;
+  }
+}
+
+/* SERVICIOS */
+
+
+#servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -20px;
+}
+
+.servicios-title {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+}
+
+.servicios-title:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #48ff00;
+}
+
+
+.containerCards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  gap: 60px;
+  margin-top: -60px;
+}
+
+.containerCards .box {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.containerCards .box .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.containerCards .box .content .icon {
+  color: #48ff00;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 0 4px #2e2e2e,
+  0 0 0 6px #48ff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background: #2e2e2e;
+  transition: 0.5s ease-in-out;
+}
+
+.containerCards .box:hover .content .icon {
+  background: #48ff00;
+  color: #2e2e2e;
+  box-shadow: 0 0 0 4px #2e2e2e,
+  0 0 0 300px #48ff00;
+}
+
+.containerCards .box .content .text h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+.containerCards .box:hover .content .text h3 {
+  color: #2e2e2e;
+}
+
+.containerCards .box .content .text p {
+  color: #999;
+  transition: 0.5s ease-in-out;
+}
+
+.containerCards .box:hover .content .text p {
+  color: #2e2e2e;
+}
+
+.containerCards .box .content .text a {
+  position: relative;
+  background: #48ff00;
+  padding: 8px 15px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.containerCards .box:hover .content .text a {
+  background: #2e2e2e;
+  color: #48ff00;
+}
+
+/* ICONS */
+
+.project-icons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.project-icons ion-icon {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.project-icons > ion-icon {
+  margin-right: auto;
+  color: var(--clr-details);
+}
+
+.project-icons a {
+  color: var(--clr-text);
+  transition: .2s;
+}
+
+/* FIN ICONS */
+
+/* FOOTER */
+
+.footer {
+  padding-block: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+}
+
+.footer-inner a {
+  font-size: 2.4rem;
+  color: var(--clr-text);
+  transition: .2s;
+}
+
+@media (hover: hover) {
+  .main-footer-inner a:hover {
+      color: var(--clr-details);
+  }
+}
+
+.footer-inner ion-icon {
+  pointer-events: none;
+  display: flex;
+  color: #fff;
+}
+
+.footer-inner > p {
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* CONTACTO */
+
+
+#contact {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -150px;
+}
+
+
+.tag {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 25px;
+  color: #fff
+}
+
+form {
+  max-inline-size: 550px;
+  margin: auto;
+}
+
+.form label {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: .5em;
+  padding-inline-start: .5em;
+}
+
+.form label span {
+  color: #48ff00;
+}
+
+.form input, .form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  padding: .8em;
+  border-radius: .5em;
+  border: 1px solid #858C94;
+}
+.form textarea {
+  margin-block-end: 2em;
+  font-family: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: #0F0A0A88;
+}
+
+
+.contact {
+  margin-block-end: 5em;
+}
+
+#mail-ocultar {
+  opacity: 0;
+}
+
+.add-to-cart-button {
+    padding: 8px 16px;
+    background-color: #48ff00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* TOOLTIP */
+
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: .75rem;
+  padding: .5rem .5rem;
+  border: 1px solid var(--clr-gray);
+  border-radius: .15rem;
+  opacity: 1;
+  visibility: hidden;
+  transition: .1s;
+}
+
+[data-tooltip] {
+  position: relative;
+  display: inline-block; /* Añadir esta propiedad para asegurar que el tooltip sea inline */
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  background-color: #000000;
+  color: #48ff00;
+  font-size: .75rem;
+  padding: .25rem .5rem; /* Reducir el padding para que el tooltip sea más compacto */
+  border: 1px solid var(--clr-gray);
+  border-radius: .15rem;
+  opacity: 0; /* Cambiar opacity a 0 para ocultar inicialmente el tooltip */
+  visibility: hidden; /* Cambiar visibility a hidden para ocultar inicialmente el tooltip */
+  transition: .1s;
+  position: absolute;
+  top: -1.65rem; /* Ajustar la posición hacia arriba para que esté sobre el icono */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Evitar que el texto se divida en varios renglones */
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1; /* Mostrar el tooltip al pasar el mouse sobre el elemento */
+  visibility: visible;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 800px){
+
+  /* Primera sección */
+
+  .banner .texto-principal {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .texto-principal .typed {
+    padding: 5;
+    font-size: 1.1rem;
+ 
+  }
+  .banner .scroll-down {
+    position: absolute;
+    color: #7d7d7d;
+    font-size: 1.25rem;
+    margin-top: 650px;
+    animation: scrollAnimation 1.5s infinite alternate;
+  }
+
+  
+  /* Ocultar imagen */
+  
+  .imageSection {
+    display: none;
+  }
+
+  /* Segunda seccion */
+
+  #aboutMe {
+    margin-top: 150px;
+    text-align: center; /* Centra todo el contenido horizontalmente */
+  }
+
+  .about_container {
+    width: 80%; /* Ajusta el ancho al 100% para que ocupe todo el ancho disponible */
+    padding: 50px 0; /* Ajusta el espaciado si es necesario */
+  }
+
+  .about_contents {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    grid-gap: 30px; /* Espaciado entre elementos en la columna */
+  }
+
+  .imageSection {
+    min-width: auto; /* Elimina el ancho mínimo */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .infoSection h1 {
+    font-size: 2.25rem;
+  }
+
+  .infoSection h2 {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .imageSection p {
+    font-size: 1.25rem;
+  }
+
+  .about_container .about_contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Tercera sección */
+
+  #proyectos {
+    margin-top: 150px;
+  }
+
+  #proyectos .section-title {
+    font-size: 2.25rem; /* Cambia el tamaño de la fuente del título */
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    gap: 1.5rem; /* Ajusta el espacio entre proyectos */
+  }
+
+  .project {
+    padding: 1rem; /* Ajusta el espacio dentro de cada proyecto */
+  }
+
+  .project-icons {
+    justify-content: center; /* Centra los iconos */
+  }
+
+  .project-title {
+    font-size: 1.25rem; /* Cambia el tamaño de la fuente del título del proyecto */
+  }
+
+  .skills-list {
+    justify-content: center; /* Centra las habilidades */
+  }
+
+  #proyectos .section-title::before {
+    content: "";
+    position: absolute;
+    bottom: -8px; /* Ajusta la posición vertical según sea necesario */
+    left: 50%; /* Coloca el subrayado en el centro del título */
+    transform: translateX(-50%); /* Centra el subrayado horizontalmente */
+    width: 54%; /* Ajusta el ancho del subrayado según sea necesario */
+    height: 2px;
+    background-color: #48ff00;
+  }
+
+  /* Cuarta sección */
+
+  #servicios {
+    margin-top: 50px;
+  }
+
+  #servicios .servicios-title {
+    font-size: 2.25rem; /* Cambia el tamaño de la fuente del título */
+  }
+
+  #servicios .servicios-title::before {
+    width: 100%; /* Ajusta el ancho del subrayado */
+  }
+
+  .paragraph {
+    text-align: center;
+    color: white;
+    margin-bottom: 1.25em;
+    font-size: 1.25rem;
+  }
+
+  .containerCards {
+    flex-direction: column; /* Cambia la dirección de la columna para apilar los elementos */
+    gap: 1.5rem; /* Ajusta el espacio entre las tarjetas */
+    padding: 50px 0; /* Ajusta el espacio interior de la sección */
+  }
+
+  .containerCards .box {
+    width: 100%; /* Haz que las tarjetas ocupen todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .containerCards .box .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Quinta seccion */
+
+  #contact {
+    margin-top: -80px;
+  }
+
+  #contact .tag {
+    font-size: 3rem; /* Cambia el tamaño de la fuente del título */
+  }
+
+  form {
+    max-width: 90%; /* Ajusta el ancho máximo del formulario */
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 1rem; /* Ajusta el tamaño de fuente de los campos de entrada y textarea */
+    padding: 0.6em; /* Ajusta el espaciado interno de los campos de entrada y textarea */
+    margin-bottom: 1em; /* Ajusta el espacio entre los campos */
+  }
+
+  /* Menu */
+
+  header {
+    display: none;
+  }
+
+  /* Logotipos */
+
+  .footer .footer-inner span{
+    font-weight: 500;
+  }
+
+}
+
+
+
+
+  
+
+
