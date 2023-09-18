@@ -1,9 +1,9 @@
 const typed = new Typed('.typed', {
 	strings: [
-		"Desarrollador Frontend",
+		"Frontend Developer",
         "Freelancer",
-		"Diseñador",
-		"Creador",
+		"Designer",
+		"Creator",
 	],
 	stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 75, // Velocidad en mlisegundos para poner una letra,
